@@ -1,56 +1,61 @@
 {
-  "source":{
-    "host":"172.16.20.179",
-    "port":1433,
-    "username":"sa",
-    "password":"controlroom",
-    "dbname":"E_FRM",
-    "schema":"dbo"
+  "source": {
+    "host": "172.16.20.179",
+    "port": 1433,
+    "username": "sa",
+    "password": "controlroom",
+    "dbname": "E_FRM",
+    "schema": "dbo"
   },
-  "destination":{
-    "host":"172.16.21.69",
-    "port":5432,
-    "username":"postgres",
-    "password":"initrans7",
-    "dbname":"insosys",
-    "schema":"dev"
+  "destination": {
+    "host": "localhost",
+    "port": 54321,
+    "username": "postgres",
+    "password": "tauah",
+    "dbname": "insosys_4",
+    "schema": "public"
   },
-  "tables":[
+  "tables": [
     {
-      "from":"master_periode",
-      "to":"master_period",
-      "columns":[
+      "from": "master_periode",
+      "to": "master_period",
+      "columns": [
         {
-          "from":"periode_id",
-          "to":"Id"
+          "from": "periode_id",
+          "to": "id"
         },
         {
-          "from":"periode_name",
-          "to":"Name"
+          "from": "periode_name",
+          "to": "name"
         },
         {
-          "from":"periode_datestart",
-          "to":"DateStart"
+          "from": "periode_datestart",
+          "to": "datestart"
         },
         {
-          "from":"periode_dateend",
-          "to":"DateEnd"
+          "from": "periode_dateend",
+          "to": "dateend"
         },
         {
-          "from":"periode_isclosed",
-          "to":"IsClosed"
+          "from": "periode_isclosed",
+          "to": "isclosed"
         },
         {
-          "from":"periode_createby",
-          "to":"CreatedBy"
+          "from": "periode_createby",
+          "to": "created_by"
         },
         {
-          "from":"periode_createdate",
-          "to":"CreatedDate"
+          "from": "periode_createdate",
+          "to": "created_date"
         },
         {
-          "from":"periode_allowsaldoawalentry",
-          "to":"AllowSaldoAwalEntry"
+          "from": "periode_allowsaldoawalentry",
+          "to": "allowsaldoawalentry"
+        },
+        {
+          "from": "is_disabled",
+          "to": "is_disabled",
+          "data": "0"
         }
       ]
     }
